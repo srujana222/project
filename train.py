@@ -1,14 +1,6 @@
-# Generated from: github_repository_popularity.ipynb
-# Converted at: 2026-04-04T13:52:54.300Z
-# Next step (optional): refactor into modules & generate tests with RunCell
-# Quick start: pip install runcell
-
 import pandas as pd
-
-
 df=pd.read_csv("github.csv")
 df
-
 df.isnull().sum()
 
 df.info()
@@ -21,8 +13,6 @@ df["primary_language"] = df["primary_language"].fillna(df["primary_language"].mo
 
 # Drop unnecessary columns
 df = df.drop(["repo_name", "owner"], axis=1)
-
-
 df.isnull().sum()
 
 cat_col=df.select_dtypes(include="object").columns.tolist()
