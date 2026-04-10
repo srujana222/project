@@ -5,7 +5,7 @@ import joblib
 model=joblib.load("git.pkl")
 encoder = joblib.load("encoder.pkl")
 #load saved model
-app=FastAPI(title="Github Repository Popularity API ")
+app = FastAPI()
 #input schema
 class Github(BaseModel):
     primary_language:str
